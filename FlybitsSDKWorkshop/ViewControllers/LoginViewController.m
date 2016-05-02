@@ -25,6 +25,8 @@
 
 #pragma mark - Properties
 // Tutorial Section 7.3 (Push Notifications)
+@property (nonatomic) NSData *apnsToken;
+@property (nonatomic) NSObject *notificationToken;
 @property (nonatomic) BOOL fromUnwindSegue;
 @property (nonatomic) BOOL animateLogo;
 
@@ -54,6 +56,12 @@ const CGFloat LogoImageViewOffset = 75;
 #pragma mark - View Lifecycle Functions
 - (void)awakeFromNib {
     // Tutorial Section 7.6 (Push Notifications)
+    _notificationToken = [[NSNotificationCenter defaultCenter] addObserverForName:@"com.flybits.push.receivedToken" object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+        if([note userInfo] && [[note userInfo] objectForKey:@"com.flybits.push.token"]) {
+            _apnsToken = [[note userInfo] objectForKey:@"com.flybits.push.token"];
+        }
+        [[NSNotificationCenter defaultCenter] removeObserver:_notificationToken];
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -114,13 +122,45 @@ const CGFloat LogoImageViewOffset = 75;
     NSString *password = _passwordTextField.text ? _passwordTextField.text : @"";
 
     // Tutorial Section 1.1 (Login / Logout)
-    [self animateLogoAndPerformSegue:sender];
+    [APIManager login:email password:password fetchUserProfile:YES withCompletion:^(User * _Nullable user, NSError * _Nullable error) {
+        if(error != nil) {
+            [[self errorLabel] setText:@"Login Error"];
+            [self setAnimateLogo:NO];
+            [sender setEnabled:YES];
+            return;
+        }
+        if(user == nil) {
+            [[self errorLabel] setText:@"Invalid User"];
+            [self setAnimateLogo:NO];
+            [sender setEnabled:YES];
+            return;
+        }
+        _errorLabel.text = @"";
+        
+        // Tutorial Section 7.4 (Push Notifications)
+        PushConfiguration *configuration;
+        if(_apnsToken != nil) {
+            configuration = [PushConfiguration configurationWithServiceLevel:PushServiceLevelBoth andAPNSToken:_apnsToken];
+        } else {
+            configuration = [PushConfiguration configurationWithServiceLevel:PushServiceLevelForeground];
+        }
+        [[PushManager sharedManager] setConfiguration:configuration];
+        
+        // Tutorial Section 8.1 (Context Data)
+        [[Session sharedInstance] setTrackLocation:YES];
+        [[ContextManager sharedManager] startDataPolling];
+        
+        [self animateLogoAndPerformSegue:sender];
+    }];
 }
 
 - (IBAction)onUnwindSegue:(UIStoryboardSegue *)segue {
     _fromUnwindSegue = YES;
 
     // Tutorial Section 1.2 (Login / Logout)
+    [APIManager logoutWithCompletion:^(NSError * _Nullable error) {
+        // Ignore the result for this example
+    }];
 }
 
 @end

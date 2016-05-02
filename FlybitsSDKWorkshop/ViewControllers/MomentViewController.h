@@ -14,5 +14,6 @@
 
 #pragma mark - Properties
 // Tutorial Section 4.1a (Moments)
+@property (nonatomic) Moment *moment;
 
 @end

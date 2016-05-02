@@ -22,8 +22,14 @@
     // Override point for customization after application launch.
 
     // Tutorial Section 0.0 (API Key)
+    [[[Session sharedInstance] configuration] setAPIKey:@"<#API Key#>"];
 
     // Tutorial Section 7.1 (Push Notifications)
+    UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+    
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
 
     return YES;
 }
@@ -51,7 +57,23 @@
 }
 
 // Tutorial Section 7.2 (Push Notifications)
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:deviceToken forKey:@"com.flybits.push.token"];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"com.flybits.push.receivedToken" object:nil userInfo:userInfo];
+}
 
 // Tutorial Section 7.5 (Push Notifications)
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    BOOL handled = [[PushManager sharedManager] notificationReceived:userInfo fetchCompletionHandler:^(UIBackgroundFetchResult result) {
+        completionHandler(result);
+    }];
+    
+    if(!handled) {
+        completionHandler(UIBackgroundFetchResultNoData);
+    }
+}
 
 @end

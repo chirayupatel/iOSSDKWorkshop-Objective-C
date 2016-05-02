@@ -13,5 +13,6 @@
 @interface ZoneViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate>
 
 // Tutorial Section 3.1a (Selected Zone)
+@property (nonatomic) Zone *selectedZone;
 
 @end
