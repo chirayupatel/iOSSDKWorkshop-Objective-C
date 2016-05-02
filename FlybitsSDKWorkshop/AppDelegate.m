@@ -6,6 +6,8 @@
 //  Copyright © 2016 Flybits Inc. All rights reserved.
 //
 
+@import FlybitsSDK;
+
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -14,9 +16,15 @@
 
 @implementation AppDelegate
 
+#pragma mark - Constants
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    // Tutorial Section 0.0 (API Key)
+
+    // Tutorial Section 7.1 (Push Notifications)
+
     return YES;
 }
 
@@ -41,5 +49,9 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+// Tutorial Section 7.2 (Push Notifications)
+
+// Tutorial Section 7.5 (Push Notifications)
 
 @end

@@ -9,23 +9,69 @@
 /* Begin PBXBuildFile section */
 		490D0A5C1CD14E05008CFD0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 490D0A5B1CD14E05008CFD0E /* main.m */; };
 		490D0A5F1CD14E05008CFD0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 490D0A5E1CD14E05008CFD0E /* AppDelegate.m */; };
-		490D0A621CD14E05008CFD0E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490D0A611CD14E05008CFD0E /* ViewController.m */; };
-		490D0A651CD14E05008CFD0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490D0A631CD14E05008CFD0E /* Main.storyboard */; };
 		490D0A671CD14E05008CFD0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 490D0A661CD14E05008CFD0E /* Assets.xcassets */; };
 		490D0A6A1CD14E05008CFD0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490D0A681CD14E05008CFD0E /* LaunchScreen.storyboard */; };
+		490D0A7E1CD14F4F008CFD0E /* MomentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 490D0A7D1CD14F4F008CFD0E /* MomentCollectionViewCell.m */; };
+		490D0A811CD1503A008CFD0E /* ZoneCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 490D0A801CD1503A008CFD0E /* ZoneCollectionViewCell.m */; };
+		490D0A871CD151E1008CFD0E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490D0A861CD151E1008CFD0E /* LoginViewController.m */; };
+		490D0A8D1CD15BCF008CFD0E /* MQTTFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490D0A8A1CD15BCF008CFD0E /* MQTTFramework.framework */; };
+		490D0A8E1CD15BCF008CFD0E /* MQTTFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 490D0A8A1CD15BCF008CFD0E /* MQTTFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		490D0A8F1CD15BD0008CFD0E /* FlybitsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490D0A8B1CD15BCF008CFD0E /* FlybitsSDK.framework */; };
+		490D0A901CD15BD0008CFD0E /* FlybitsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 490D0A8B1CD15BCF008CFD0E /* FlybitsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		490D0A911CD15BD0008CFD0E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490D0A8C1CD15BCF008CFD0E /* Alamofire.framework */; };
+		490D0A921CD15BD0008CFD0E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 490D0A8C1CD15BCF008CFD0E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		490D0A961CD2573D008CFD0E /* ZoneListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490D0A951CD2573D008CFD0E /* ZoneListViewController.m */; };
+		491F5E2E1CD28B6A00324C3E /* ZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491F5E2D1CD28B6A00324C3E /* ZoneViewController.m */; };
+		491F5E311CD2AD1000324C3E /* MomentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491F5E301CD2AD1000324C3E /* MomentViewController.m */; };
+		491F5E341CD39B4800324C3E /* TextMoment.m in Sources */ = {isa = PBXBuildFile; fileRef = 491F5E331CD39B4800324C3E /* TextMoment.m */; };
+		491F5E371CD3B14800324C3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491F5E351CD3B14800324C3E /* Main.storyboard */; };
+		491F5E3A1CD3F9CD00324C3E /* WebMoment.m in Sources */ = {isa = PBXBuildFile; fileRef = 491F5E391CD3F9CD00324C3E /* WebMoment.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		490D0A931CD15BD0008CFD0E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				490D0A8E1CD15BCF008CFD0E /* MQTTFramework.framework in Embed Frameworks */,
+				490D0A921CD15BD0008CFD0E /* Alamofire.framework in Embed Frameworks */,
+				490D0A901CD15BD0008CFD0E /* FlybitsSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		490D0A571CD14E05008CFD0E /* FlybitsSDKWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlybitsSDKWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		490D0A5B1CD14E05008CFD0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		490D0A5D1CD14E05008CFD0E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		490D0A5E1CD14E05008CFD0E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		490D0A601CD14E05008CFD0E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		490D0A611CD14E05008CFD0E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		490D0A641CD14E05008CFD0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		490D0A661CD14E05008CFD0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		490D0A691CD14E05008CFD0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		490D0A6B1CD14E05008CFD0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		490D0A7C1CD14F4F008CFD0E /* MomentCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentCollectionViewCell.h; sourceTree = "<group>"; };
+		490D0A7D1CD14F4F008CFD0E /* MomentCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentCollectionViewCell.m; sourceTree = "<group>"; };
+		490D0A7F1CD1503A008CFD0E /* ZoneCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoneCollectionViewCell.h; sourceTree = "<group>"; };
+		490D0A801CD1503A008CFD0E /* ZoneCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoneCollectionViewCell.m; sourceTree = "<group>"; };
+		490D0A851CD151E1008CFD0E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		490D0A861CD151E1008CFD0E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		490D0A8A1CD15BCF008CFD0E /* MQTTFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MQTTFramework.framework; sourceTree = "<group>"; };
+		490D0A8B1CD15BCF008CFD0E /* FlybitsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FlybitsSDK.framework; sourceTree = "<group>"; };
+		490D0A8C1CD15BCF008CFD0E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		490D0A941CD2573D008CFD0E /* ZoneListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoneListViewController.h; sourceTree = "<group>"; };
+		490D0A951CD2573D008CFD0E /* ZoneListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoneListViewController.m; sourceTree = "<group>"; };
+		491F5E2C1CD28B6A00324C3E /* ZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoneViewController.h; sourceTree = "<group>"; };
+		491F5E2D1CD28B6A00324C3E /* ZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoneViewController.m; sourceTree = "<group>"; };
+		491F5E2F1CD2AD1000324C3E /* MomentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentViewController.h; sourceTree = "<group>"; };
+		491F5E301CD2AD1000324C3E /* MomentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentViewController.m; sourceTree = "<group>"; };
+		491F5E321CD39B4800324C3E /* TextMoment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextMoment.h; sourceTree = "<group>"; };
+		491F5E331CD39B4800324C3E /* TextMoment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextMoment.m; sourceTree = "<group>"; };
+		491F5E361CD3B14800324C3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		491F5E381CD3F9CD00324C3E /* WebMoment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebMoment.h; sourceTree = "<group>"; };
+		491F5E391CD3F9CD00324C3E /* WebMoment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebMoment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +79,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490D0A8D1CD15BCF008CFD0E /* MQTTFramework.framework in Frameworks */,
+				490D0A911CD15BD0008CFD0E /* Alamofire.framework in Frameworks */,
+				490D0A8F1CD15BD0008CFD0E /* FlybitsSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +107,14 @@
 		490D0A591CD14E05008CFD0E /* FlybitsSDKWorkshop */ = {
 			isa = PBXGroup;
 			children = (
+				490D0A7B1CD14EFA008CFD0E /* CollectionViewCells */,
+				490D0A791CD14EFA008CFD0E /* Models */,
+				490D0A771CD14EFA008CFD0E /* ViewControllers */,
+				490D0A7A1CD14EFA008CFD0E /* Frameworks */,
 				490D0A5D1CD14E05008CFD0E /* AppDelegate.h */,
 				490D0A5E1CD14E05008CFD0E /* AppDelegate.m */,
-				490D0A601CD14E05008CFD0E /* ViewController.h */,
-				490D0A611CD14E05008CFD0E /* ViewController.m */,
-				490D0A631CD14E05008CFD0E /* Main.storyboard */,
 				490D0A661CD14E05008CFD0E /* Assets.xcassets */,
+				491F5E351CD3B14800324C3E /* Main.storyboard */,
 				490D0A681CD14E05008CFD0E /* LaunchScreen.storyboard */,
 				490D0A6B1CD14E05008CFD0E /* Info.plist */,
 				490D0A5A1CD14E05008CFD0E /* Supporting Files */,
@@ -79,6 +130,53 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		490D0A771CD14EFA008CFD0E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				490D0A851CD151E1008CFD0E /* LoginViewController.h */,
+				490D0A861CD151E1008CFD0E /* LoginViewController.m */,
+				490D0A941CD2573D008CFD0E /* ZoneListViewController.h */,
+				490D0A951CD2573D008CFD0E /* ZoneListViewController.m */,
+				491F5E2C1CD28B6A00324C3E /* ZoneViewController.h */,
+				491F5E2D1CD28B6A00324C3E /* ZoneViewController.m */,
+				491F5E2F1CD2AD1000324C3E /* MomentViewController.h */,
+				491F5E301CD2AD1000324C3E /* MomentViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		490D0A791CD14EFA008CFD0E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				491F5E321CD39B4800324C3E /* TextMoment.h */,
+				491F5E331CD39B4800324C3E /* TextMoment.m */,
+				491F5E381CD3F9CD00324C3E /* WebMoment.h */,
+				491F5E391CD3F9CD00324C3E /* WebMoment.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		490D0A7A1CD14EFA008CFD0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				490D0A8A1CD15BCF008CFD0E /* MQTTFramework.framework */,
+				490D0A8B1CD15BCF008CFD0E /* FlybitsSDK.framework */,
+				490D0A8C1CD15BCF008CFD0E /* Alamofire.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		490D0A7B1CD14EFA008CFD0E /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				490D0A7C1CD14F4F008CFD0E /* MomentCollectionViewCell.h */,
+				490D0A7D1CD14F4F008CFD0E /* MomentCollectionViewCell.m */,
+				490D0A7F1CD1503A008CFD0E /* ZoneCollectionViewCell.h */,
+				490D0A801CD1503A008CFD0E /* ZoneCollectionViewCell.m */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,6 +187,7 @@
 				490D0A531CD14E05008CFD0E /* Sources */,
 				490D0A541CD14E05008CFD0E /* Frameworks */,
 				490D0A551CD14E05008CFD0E /* Resources */,
+				490D0A931CD15BD0008CFD0E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -110,6 +209,15 @@
 				TargetAttributes = {
 					490D0A561CD14E05008CFD0E = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = CH9YG7X49H;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -137,8 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				490D0A6A1CD14E05008CFD0E /* LaunchScreen.storyboard in Resources */,
+				491F5E371CD3B14800324C3E /* Main.storyboard in Resources */,
 				490D0A671CD14E05008CFD0E /* Assets.xcassets in Resources */,
-				490D0A651CD14E05008CFD0E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +257,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				490D0A621CD14E05008CFD0E /* ViewController.m in Sources */,
+				491F5E311CD2AD1000324C3E /* MomentViewController.m in Sources */,
+				491F5E341CD39B4800324C3E /* TextMoment.m in Sources */,
+				490D0A961CD2573D008CFD0E /* ZoneListViewController.m in Sources */,
+				490D0A811CD1503A008CFD0E /* ZoneCollectionViewCell.m in Sources */,
+				490D0A7E1CD14F4F008CFD0E /* MomentCollectionViewCell.m in Sources */,
+				490D0A871CD151E1008CFD0E /* LoginViewController.m in Sources */,
+				491F5E3A1CD3F9CD00324C3E /* WebMoment.m in Sources */,
+				491F5E2E1CD28B6A00324C3E /* ZoneViewController.m in Sources */,
 				490D0A5F1CD14E05008CFD0E /* AppDelegate.m in Sources */,
 				490D0A5C1CD14E05008CFD0E /* main.m in Sources */,
 			);
@@ -158,20 +273,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		490D0A631CD14E05008CFD0E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				490D0A641CD14E05008CFD0E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		490D0A681CD14E05008CFD0E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				490D0A691CD14E05008CFD0E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		491F5E351CD3B14800324C3E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				491F5E361CD3B14800324C3E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -198,12 +313,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -243,10 +360,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -265,7 +384,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FlybitsSDKWorkshop/Frameworks",
+				);
 				INFOPLIST_FILE = FlybitsSDKWorkshop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flybits.FlybitsSDKWorkshop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,7 +400,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FlybitsSDKWorkshop/Frameworks",
+				);
 				INFOPLIST_FILE = FlybitsSDKWorkshop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flybits.FlybitsSDKWorkshop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +431,7 @@
 				490D0A701CD14E05008CFD0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
