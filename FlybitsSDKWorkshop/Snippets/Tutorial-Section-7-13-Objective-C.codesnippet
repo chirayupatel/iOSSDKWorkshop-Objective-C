@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>t713</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSString *zoneExitedTopic = [PushMessage NotificationType:PushMessageEntityZone action:PushMessageActionExited];
+    /* NSObject *token = */ [[NSNotificationCenter defaultCenter] addObserverForName:zoneExitedTopic object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+        if(note.userInfo != nil) {
+            [self updateZoneInfo:note.userInfo];
+        }
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1D82EFF9-D28F-4084-B8CD-F78F7FCA1A9B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Register for Zone Exited Push Message</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Tutorial Section 7.13</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

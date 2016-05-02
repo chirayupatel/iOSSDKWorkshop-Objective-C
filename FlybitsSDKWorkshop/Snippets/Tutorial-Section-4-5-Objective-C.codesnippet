@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>t45</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)loadMomentData {
+    NSString *urlString = [NSString stringWithFormat:@"%@/WebsiteBits?alllocales=true", [_moment launchURL]];
+    
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:urlString]];
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if(error != nil || data == nil) {
+            NSLog(@"Encountered error: %@", error);
+            return;
+        }
+        
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&amp;error];
+        if(error != nil) {
+            NSLog(@"Encountered error: %@", [error localizedDescription]);
+            return;
+        }
+
+        [_momentWebView setHidden:NO];
+        [_momentTextView setHidden:YES];
+        
+        WebMomentData *webMomentData = [[WebMomentData alloc] initWithDictionary:json];
+        NSURL *url = [[[webMomentData websites] firstObject] URL];
+        if(url != nil) {
+            NSURLRequest *webRequest = [NSURLRequest requestWithURL:url];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [_momentWebView loadRequest:webRequest];
+            });
+        }
+    }];
+    
+    // Issue request
+    [task resume];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2A90D022-1812-4484-84DE-1ABF46BF52AB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Sample Moment Data Request</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Tutorial Section 4.5</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
