@@ -21,7 +21,7 @@
 @implementation MomentViewController
 
 const NSString * const URL = @"url";
-// Tutorial Section 4.6 (Moments)
+// Tutorial Section 4.7 (Moments)
 
 // Tutorial Section 4.1b (Moments)
 - (void)setMoment:(Moment *)moment {
