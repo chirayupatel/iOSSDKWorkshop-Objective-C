@@ -22,6 +22,9 @@
 
 const NSString * const URL = @"url";
 // Tutorial Section 4.7 (Moments)
+const NSString * const TextMomentPackageName    = @"com.flybits.moments.text";
+const NSString * const WebsiteMomentPackageName = @"com.flybits.moments.website";
+const NSString * const AOBMomentPackageName     = @"com.flybits.moments.jsonbuilder";
 
 // Tutorial Section 4.1b (Moments)
 - (void)setMoment:(Moment *)moment {
