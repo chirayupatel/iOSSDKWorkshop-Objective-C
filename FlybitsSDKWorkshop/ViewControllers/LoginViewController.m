@@ -122,7 +122,7 @@ const CGFloat LogoImageViewOffset = 75;
     NSString *password = _passwordTextField.text ? _passwordTextField.text : @"";
 
     // Tutorial Section 1.1 (Login / Logout)
-    [APIManager login:email password:password fetchUserProfile:YES withCompletion:^(User * _Nullable user, NSError * _Nullable error) {
+    [APIManager login:email password:password rememberMe:YES withCompletion:^(User * _Nullable user, NSError * _Nullable error) {
         if(error != nil) {
             [[self errorLabel] setText:@"Login Error"];
             [self setAnimateLogo:NO];

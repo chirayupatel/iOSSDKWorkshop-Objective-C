@@ -6,6 +6,7 @@
 //  Copyright © 2016 Flybits Inc. All rights reserved.
 //
 
+#import "CoreLocation/CoreLocation.h"
 #import "ZoneCollectionViewCell.h"
 #import "ZoneViewController.h"
 #import "ZoneListViewController.h"
