@@ -18,8 +18,6 @@
 		490D0A8E1CD15BCF008CFD0E /* MQTTFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 490D0A8A1CD15BCF008CFD0E /* MQTTFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		490D0A8F1CD15BD0008CFD0E /* FlybitsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490D0A8B1CD15BCF008CFD0E /* FlybitsSDK.framework */; };
 		490D0A901CD15BD0008CFD0E /* FlybitsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 490D0A8B1CD15BCF008CFD0E /* FlybitsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		490D0A911CD15BD0008CFD0E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490D0A8C1CD15BCF008CFD0E /* Alamofire.framework */; };
-		490D0A921CD15BD0008CFD0E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 490D0A8C1CD15BCF008CFD0E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		490D0A961CD2573D008CFD0E /* ZoneListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490D0A951CD2573D008CFD0E /* ZoneListViewController.m */; };
 		491F5E2E1CD28B6A00324C3E /* ZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491F5E2D1CD28B6A00324C3E /* ZoneViewController.m */; };
 		491F5E311CD2AD1000324C3E /* MomentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491F5E301CD2AD1000324C3E /* MomentViewController.m */; };
@@ -37,7 +35,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				490D0A8E1CD15BCF008CFD0E /* MQTTFramework.framework in Embed Frameworks */,
-				490D0A921CD15BD0008CFD0E /* Alamofire.framework in Embed Frameworks */,
 				490D0A901CD15BD0008CFD0E /* FlybitsSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -82,7 +79,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				490D0A8D1CD15BCF008CFD0E /* MQTTFramework.framework in Frameworks */,
-				490D0A911CD15BD0008CFD0E /* Alamofire.framework in Frameworks */,
 				490D0A8F1CD15BD0008CFD0E /* FlybitsSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
